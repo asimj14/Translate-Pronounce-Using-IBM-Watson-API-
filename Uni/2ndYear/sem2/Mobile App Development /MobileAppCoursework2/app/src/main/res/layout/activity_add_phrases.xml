@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPhrases">
+
+    <EditText
+        android:id="@+id/editText_add"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Enter the phrase"
+        android:ems="10"
+        android:hint="@string/enter_the_phrase_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/result_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPhrase_lbl"
+        tools:targetApi="o" />
+    <TextView
+        android:id="@+id/displayPhrase_mainlbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="7dp"
+        android:text="@string/add_pharses_to_database_main_lbl"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addPhrase_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_enter_the_phrase_label"
+        app:layout_constraintBottom_toTopOf="@+id/editText_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/savePhrase_button"
+        android:onClick = "save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result_txt" />
+
+    <TextView
+        android:id="@+id/result_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_textview"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/save_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_add"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

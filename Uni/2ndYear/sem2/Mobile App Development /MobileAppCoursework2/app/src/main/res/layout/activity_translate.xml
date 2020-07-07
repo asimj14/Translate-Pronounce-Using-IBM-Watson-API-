@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Translate">
+
+    <ListView
+        android:id="@+id/phrases_list"
+        android:layout_width="409dp"
+        android:layout_height="410dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempTextBox_txt" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_language_button"
+        app:layout_constraintBottom_toTopOf="@+id/selectedText_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/languages_array"
+        android:prompt="@string/country_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayPhrase_lbl" />
+
+    <TextView
+        android:id="@+id/selectedText_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selectedText_textview"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tempTextBox_txt"
+        app:layout_constraintEnd_toStartOf="@+id/translate_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pronounce_btn"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmit"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/pronounce_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pronounce"
+        android:text="@string/pronounce_button"
+        app:layout_constraintBottom_toTopOf="@+id/phrases_list"
+        app:layout_constraintEnd_toStartOf="@+id/selectedText_txt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+
+    <Button
+        android:id="@+id/translate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="translate"
+        android:text="@string/translate_button"
+        app:layout_constraintBottom_toTopOf="@+id/phrases_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/selectedText_txt"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+
+    <TextView
+        android:id="@+id/displayPhrase_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="7dp"
+        android:text="@string/translate_and_pronounce_main_label"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/spinner1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tempTextBox_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempTextBox_textView"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/phrases_list"
+        app:layout_constraintEnd_toStartOf="@+id/translate_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pronounce_btn"
+        app:layout_constraintTop_toBottomOf="@+id/selectedText_txt"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

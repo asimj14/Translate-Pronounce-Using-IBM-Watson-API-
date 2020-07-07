@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+    tools:context=".EditPhrases"
+    tools:layout_editor_absoluteY="-2dp">
+
+    <TextView
+        android:id="@+id/subscribeLang_mainlbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="7dp"
+        android:text="@string/edit_the_saved_phrases_main_label"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPhrase_edit"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=" "
+        android:ems="10"
+        android:hint="@string/select_the_phrase_to_edit_hint"
+        android:inputType="textPersonName"
+
+        app:layout_constraintBottom_toTopOf="@+id/editPhrase_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subscribeLang_mainlbl"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/editPhrase_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editPhrase_button"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toStartOf="@+id/savePhrase_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPhrase_edit" />
+
+    <Button
+        android:id="@+id/savePhrase_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/savePhrase_button"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editPhrase_btn"
+        app:layout_constraintTop_toBottomOf="@+id/editPhrase_edit" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPhrase_btn">
+
+        <LinearLayout
+            android:id="@+id/mylayout_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:theme="@style/RadioButtonStyle" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

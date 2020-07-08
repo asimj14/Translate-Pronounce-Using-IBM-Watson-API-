@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">MobileAppCoursework1</string>
+    <string name="dog_breed_identifier_txt">Dog Breed Identifier</string>
+    <string name="identify_the_breed_btn">Identify The Breed</string>
+    <string name="identify_the_dog_btn">Identify The Dog</string>
+    <string name="search_dog_breeds_btn">Search Dog Breeds</string>
+    <string name="exit_btn">Exit</string>
+    <string name="back_btn">BACK</string>
+    <string name="fwef_txt">qwertr</string>
+    <string name="textview_txt">TextView</string>
+    <string name="select_the_correct_breed_txt">Select the correct breed :</string>
+    <string name="submit_btn">SUBMIT</string>
+    <string name="dog_image_content_description">dog image</string>
+    <string name="spinner_label_textview">TextView</string>
+    <string name="result_text_view">TextView</string>
+    <string name="next_button">NEXT</string>
+    <string name="correctanswer_txt">TextView</string>
+    <string name="breed_text_view">TextView</string>
+    <string name="third_image_view">third_image_view</string>
+    <string name="second_image_view">second_image_view</string>
+    <string name="first_image_view">first_image_view</string>
+    <string name="select_image_label">TextView</string>
+    <string name="result1_text_view">TextView</string>
+    <string name="next2_button">NEXT</string>
+    <string name="select_the_correct_image">Select the correct image:</string>
+    <string name="search_textview_lbl">TextView</string>
+    <string name="slide_images">slide images</string>
+    <string name="stop_button">STOP</string>
+    <string name="submit_button">submit</string>
+    <string name="error_text_view">TextView</string>
+    <string name="enter_dog_breed_to_search">Enter dog breed to search</string>
+    <string name="enter_the_breed_to_search">Enter the breed to search</string>
+    <string name="search_dog_breed_lbl">Search Dog Breed</string>
+    <string-array name="dogs_array">
+        <item>Blenheim spaniel</item>
+        <item>Boxer</item>
+        <item>Chow</item>
+        <item>German Shepherd</item>
+        <item>Golden Retriever</item>
+        <item>Greater Swiss Mountain</item>
+        <item>Husky</item>
+        <item>Italian Gray Hound</item>
+        <item>Pointer</item>
+        <item>Pomeranian</item>
+    </string-array>
+</resources>

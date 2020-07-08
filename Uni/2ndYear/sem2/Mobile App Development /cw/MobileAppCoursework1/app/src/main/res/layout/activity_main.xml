@@ -1,0 +1,100 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EADECE"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/my_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nosifer"
+        android:text="@string/dog_breed_identifier_txt"
+        android:textAlignment="center"
+        android:textColor="#5B4C49"
+        android:textColorHighlight="@android:color/background_light"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/identify_dog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/identify_dog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#5B4C49"
+        android:fontFamily="@font/nosifer"
+
+
+        android:onClick="Identify_dog"
+        android:padding="20sp"
+        android:text="@string/identify_the_dog_btn"
+        android:textColor="#FCFFFC"
+        app:layout_constraintBottom_toTopOf="@+id/identify_breed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_app_name" />
+
+    <Button
+        android:id="@+id/identify_breed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#5B4C49"
+        android:fontFamily="@font/nosifer"
+        android:onClick="Identify_breed"
+
+
+        android:padding="20sp"
+        android:text="@string/identify_the_breed_btn"
+        android:textColor="#FCFFFC"
+        app:layout_constraintBottom_toTopOf="@+id/search_breeds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/identify_dog" />
+
+    <Button
+        android:id="@+id/search_breeds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#5B4C49"
+        android:fontFamily="@font/nosifer"
+        android:padding="20sp"
+        android:onClick="search_breed"
+
+        android:text="@string/search_dog_breeds_btn"
+        android:textColor="#FCFFFC"
+        app:layout_constraintBottom_toTopOf="@+id/exit_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/identify_breed" />
+
+
+    <Button
+        android:id="@+id/exit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#5B4C49"
+        android:fontFamily="@font/nosifer"
+        android:onClick="exit"
+        android:padding="20sp"
+
+        android:text="@string/exit_btn"
+        android:textColor="#FCFFFC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/identify_breed"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
